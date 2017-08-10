@@ -1,5 +1,3 @@
-<!--Nan's Comment-->
-
 <!doctype html>
 <html lang="en">
 
@@ -7,53 +5,56 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<title>HOME GAINS</title>
+	<title>weather app</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<!-- BOOTSTRAP LINK -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="assets/animate.css">
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Google API -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
 <div class="page-header">
-	<h1>Home Gains</h1>
+	<h1>Weather + Maps</h1>
 </div>
 
 <div class="row">
 	<div class="col-lg-1"></div>
-
-	<div class="col-lg-8">
-		<div class="panel-default">
-			<div class="panel-body">
-				<h3>How to Use Home Gains</h3>
-				<p> This is where we will put the instruction and "how to" to use the application</p>
-			</div>
-		</div>
-	</div>
 </div>
 
 <div class="row">
 	<div class="col-lg-1"></div>
 
 	<div class="col-lg-4">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>Instructions</h3>
+				<p>Type the name of a city for the current weather data</p>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>Current Date/Time</h3>
+			</div>
+		</div>
+
 		<div class="panel panel-default" id="panel">
 	  		<div class="panel-body">
-	  			Street Address
-	   			<div class="well"></div>
-				City
-				<div class="well"></div>
-				State
-				<div class="well"></div>
-				Zip code
-				<div class="well"></div>
+	  			Search
+	   			<div class="form-group">
+	   				<input type="search">
+	   			</div>
+	   			<button id="search">Search</button>
 	  		</div>
 		</div>
 	</div>
@@ -63,28 +64,33 @@
 	<div class="col-lg-4" id="panel">
 		<div class="panel panel-default">
 			<p>MAP</p>
+			<div id="map"></div>
 		</div>
 	</div>
 
 </div>
 
+<container>
 <div class="row">
 	<div class="col-lg-1"></div>
 
-	<div class="col-lg-4">
-		<div class="panel panel-default" id="panel">
-		Where the Zestimate Value will populate
+ <div class="col-lg-10"> 
+		<div class="panel panel-default" id="weather-info">
+		Where the Weather Info will appear
 		</div>
-	</div>
+	</div> 
 
 </div>
+</container>
 
 	<!-- JQUERY -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<!-- BOOSTRAP JQUERY -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	
-	<script type="text/javascript" href="assets/app.js"></script>
+	<!-- Google API -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS9KZh27zq_8_0aon5HNWAJ9Lu7orkD7E&callback=initMap"></script>
+	<!-- Local JS File -->
+	<script type="text/javascript" src="/Users/chrisdaschke/Portfolio/teamgit-gains/assets/app.js"></script>
 
 </body>
 

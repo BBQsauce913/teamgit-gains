@@ -1,7 +1,17 @@
-body {
-	background-color:#FDE74C;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-#panel {
-	background-color:#9BC53D;
+#new-data {
+	float:left;
+	height:300px;
+	width:225px;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+	background-color: grey;
 }
