@@ -1,11 +1,12 @@
+var k = 0;
+var info = [];
 
 $(document).ready(function() {
 	
 	$("#search").on("click", function(){
-		
 		var key = "f59f8c4d5d70393d411c5b5ea1c8a4f6";
 		var city = $("input").val().trim();
-		var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + key;
+		var queryURL = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&units=imperial" + "&cnt=5&appid=" + key;
 		
 		$.ajax({url: queryURL, method: "GET"})
     	.done(function(response) {
@@ -14,29 +15,56 @@ $(document).ready(function() {
 			console.log(response);
     	var results = response.list;
 			console.log(city);
-    
-    	for(var i = 0; i < results.length; i+=8) {
-        	var date = results[i].dt_txt;
-        	var temp = results[i].main.temp;
-        	var humidity = results[i].main.humidity;
-        	var main = results[i].weather[0].main;
-        	var desc = results[i].weather[0].description;
-        	var iconCode = results[i].weather[0].icon;
-        	var iconURL = "http://openweathermap.org/img/w/" + 	iconCode + ".png";
-        	var windSpeed = results[i].wind.icon;
+			
+			var containerDiv = $("<div class='container'>");
+			var rowDiv = $("<div class='row new'>");
+			var dataDiv = $("<div class='row data'>");
+			var h3Title = $("<h3>").text("5 Day Forecast");
+			var titleDiv = $("<div class='col-xs-12'>").append(h3Title);
+			
+			var newDiv = containerDiv.append(rowDiv);
+			
+			$("#weather-info").append(newDiv);
+			$(".new").append(titleDiv);
+			$(".new").append(dataDiv);
+			$(".new").removeClass("new");
+
+    	for(var i = 0; i < 5; i++) {
+        var date = results[i].dt;
+        var high = results[i].temp.max;
+        var low = results[i].temp.min;
+        var desc = results[i].weather[0].description;
+        var iconCode = results[i].weather[0].icon;
+        var iconURL = "http://openweathermap.org/img/w/" + 	iconCode + ".png";
 				
-					$("#weather-info").prepend("<div class='col-lg-6'><div class='panel panel-default' id='format'><div id='description'>Description</div><div id='icon'>Icon</div><div id='temp'>Temp</div><div id='wind'>Wind</div><div id='humidity'>Humidity</div></div>");
+				info.push(date);
+				info.push(iconURL);
+				info.push(high);
+				info.push(low);
+				info.push(desc);
 				
-					$("#description").text(desc);
-					$("#icon").html("<img src='" + iconURL + "'>");
-					$("#temp").text(temp);
-					$("#wind").text(windSpeed);
-					$("#humidity").text(humidity);
-        
-        	console.log("date " + date);
+				var h3Date = $("<h3>").addClass("date").append((moment.unix((info[k]))).format("dddd"));
+				k+=1;
+				var imgIcon = $("<img>").addClass("icon").attr("src", info[k]);
+				k+=1;
+				var h5High = $("<h5>").addClass("high").append(info[k]);
+				k+=1;
+				var h5Low = $("<h5>").addClass("low").append(info[k]);
+				k+=1;
+				var h5Desc = $("<h5>").addClass("desc").append(info[k]);
+				k+=1;
+				
+				var colDiv = $("<div class='col-xs-2'>").append(h3Date);
+				colDiv.append(imgIcon);
+				colDiv.append(h5High);
+				colDiv.append(h5Low);
+				colDiv.append(h5Desc);
+					
+				$(".data").append(colDiv);
     	}
 			
-			});
-		
+			$(".data").removeClass("data");
+			
+		});
 	});    
 });
