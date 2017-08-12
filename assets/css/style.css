@@ -1,0 +1,137 @@
+/*-----------------INDEX---------------------*/
+  /*** 1.0 BOX SIZING ***/
+  /*** 2.0 COLORS ***/
+  	/* 2.1 #535A60 - Graphite */
+  	/* 2.2 #7DB4E0 - Sampled Blue from image */
+  	/* 2.3 #705d86 - Pale Lavender */
+  /*** 3.0 TEXT & FONTS ***/
+    /* 3.1 font-family: 'Kameron', serif; */
+    /* 3.2 font-family: 'PT Sans', sans-serif; */
+  /*** 4.0 PAGE & TOP CONSTRUCTION ***/
+  /*** 5.0 SEARCH BOXES AND BUTTONS ***/
+  /*** 6.0 MAP ***/
+  /*** 7.0 WEATHER ***/
+/*------------------------------------------*/
+
+/*** 1.0 BOX SIZING ***/
+* {
+  box-sizing: border-box;
+}
+/* this keeps border and padding inside the box measurement */
+
+/*** 3.0 TEXT & FONTS ***/
+@import url('https://fonts.googleapis.com/css?family=Kameron');
+@import url('https://fonts.googleapis.com/css?family=PT Sans');
+h1{
+  font-family: 'Kameron', serif;
+  font-size: 96px;
+  text-align: center;
+  margin: 0px;
+  color: #FFF; /* white */
+}
+h3{
+  font-family: 'Kameron', serif;
+  font-size: 28px;
+  color: #282828; /* Graphite */
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+h4{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin: 0px;
+  color: #936E35; /* white */
+}
+p{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+}
+
+/*** 4.0 PAGE & TOP CONSTRUCTION ***/
+body{
+  background-color: #282828; /* Graphite */
+
+}
+.container-fluid{
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.page-header{
+  margin-top: 0px;
+  margin-bottom: 30px;
+  border: 0px;
+  padding-top: 40px;
+  height: 190px;
+  background: url("../images/weather_2.png");
+}
+.row{
+  width: 100%;
+  margin: 0px;
+}
+/*** 5.0 SEARCH BOXES AND BUTTONS ***/
+#leftSide{
+  width: 40%;
+  float: left;
+  padding: 0px;
+  margin-top: 0px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  border: 0px;
+}
+#infoBox{
+  height: 110px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #7DB4E0;
+}
+#placeSearch{
+  height: 100px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #7DB4E0;
+}
+#weatherSearch{
+  height: 100px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #7DB4E0;
+}
+
+/*** 6.0 MAP ***/
+#map{
+  width: 50%;
+  height: 370px;
+  float: right;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  background-color: #705d86; /* Pale Lavender */
+}
+
+/*** 7.0 WEATHER ***/
+#new-data {
+  float:left;
+  height:300px;
+  width:225px;
+}
