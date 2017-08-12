@@ -130,8 +130,17 @@ body{
 }
 
 /*** 7.0 WEATHER ***/
+#weather-info {
+  text-align: center;
+  height:175px;
+  /*margin-left:75px;*/
+  overflow-x: scroll;
+}
+
 #new-data {
-  float:left;
-  height:300px;
-  width:225px;
+  float:center;
+  height:125px;
+  width:150px;
+  text-align: center;
+  text-transform: uppercase;
 }

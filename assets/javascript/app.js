@@ -25,7 +25,7 @@ $(document).ready(function() {
         	var iconURL = "http://openweathermap.org/img/w/" + 	iconCode + ".png";
         	var windSpeed = results[i].wind.icon;
 				
-					$("#weather-info").prepend("<div class='col-lg-6'><div class='panel panel-default' id='format'><div id='description'>Description</div><div id='icon'>Icon</div><div id='temp'>Temp</div><div id='wind'>Wind</div><div id='humidity'>Humidity</div></div>");
+					$("#weather-info").prepend("<div class='col-lg-2'id='new-data'><div id='description'>Description</div><div id='icon'>Icon</div><div id='temp'>Temp</div><div id='wind'>Wind</div><div id='humidity'>Humidity</div></div>");
 				
 					$("#description").text(desc);
 					$("#icon").html("<img src='" + iconURL + "'>");
