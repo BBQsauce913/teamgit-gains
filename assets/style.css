@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#new-data {
+	float:left;
+	height:300px;
+	width:225px;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+	background-color: grey;
+}
