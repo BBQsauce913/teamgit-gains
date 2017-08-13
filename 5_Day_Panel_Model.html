@@ -1,15 +1,21 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
+
 <head>
-    <meta charset="UTF-8">
-    <title>5 Day Panel Model</title>
+  <title>5 Day Panel Model</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Week 8 assignment, Project 1" />
+  <meta name="classification" content="game" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <!-- CSS & BOOTSTRAP & JQUERY -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Kameron|PT+Sans" rel="stylesheet">
@@ -26,78 +32,78 @@
     <div class="page-header">
         <h1>Weather Finder</h1>
     </div>
+    <div id="leftSide">
+        <div id="infoBox">
+            <h2>Instructions</h2>
+            <p>To see the map and weather for a location that you desire, enter the Location and date in the boxes below.</p>
+        </div><!-- close of #infoBox -->
+        <div id="placeSearch">
+            <h2>Location</h2>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter the name of a city.">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-map-marker"></span> Search Map</button>
+                </span>
+            </div><!-- close of .location input-group -->
+        </div><!-- close of #placeSearch -->
+        <div id="weatherSearch">
+            <h2>Weather</h2>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="DD/MM">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-certificate"></span>  Search Weather</button>
+                </span>
+            </div><!-- close of .weather input-group -->
+        </div><!-- close of #weatherSearch -->
+    </div><!-- close of #leftSide -->
+    <div id="map"></div>
+    <div id="weather-info">
+        <div class="row">
+            <div id="weatherBanner">
+               <h3>5 Day Forecast</h3>
+            </div><!-- close of #weatherBanner -->
+        </div>
+        <div id="panelConatiner">
+            <div id="weatherPanel">
+                <h5 class="date">Day 1</h5>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div><!-- close of #weatherPanel -->
+            <div id="weatherPanel">
+                <h5 class="date">Day 2</h5>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div><!-- close of #weatherPanel -->
+            <div id="weatherPanel">
+                <h5 class="date">Day 3</h5>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div><!-- close of #weatherPanel -->
+            <div id="weatherPanel">
+                <h5 class="date">Day 4</h5>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div><!-- close of #weatherPanel -->
+            <div id="weatherPanel">
+                <h5 class="date">Day 5</h5>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div><!-- close of #weatherPanel -->
+        </div><!-- close of #panelConatiner -->
+    </div><!-- close of #weather-info -->
+</div><!-- close of .container-fluid -->
 
-        <div id="leftSide">
-            <div id="infoBox">
-                <h2>Instructions</h2>
-                <p>To see the map and weather for a location that you desire, enter the Location and date in the boxes below.</p>
-            </div>
-            <div id="placeSearch">
-                <h2>Location</h2>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter the name of a city.">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-map-marker"></span> Search Map</button>
-                    </span>
-                </div><!-- /input-group -->
-            </div>
-            <div id="weatherSearch">
-                <h2>Weather</h2>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="DD/MM">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-certificate"></span>  Search Weather</button>
-                </div><!-- /input-group -->
-            </div>
-        </div>
-        <div id="map"></div>
-        
-        <div class="row">
-            <div id="weatherBanner" class="col-xs-12">
-                <h3>5 Day Forecast</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-1 empty">
-            </div>
-            <div id="weatherPanel" class="col-xs-2">
-                <h3 class="date">Day 1</h3>
-                <p class="icon">Icon</p>
-                <p class="high">High</p>
-                <p class="low">Low</p>
-                <p class="desc">Description</p>
-            </div>
-            <div id="weatherPanel" class="col-xs-2">
-                <h3 class="date">Day 2</h3>
-                <p class="icon">Icon</p>
-                <p class="high">High</p>
-                <p class="low">Low</p>
-                <p class="desc">Description</p>
-            </div>
-            <div id="weatherPanel" class="col-xs-2">
-                <h3 class="date">Day 3</h3>
-                <p class="icon">Icon</p>
-                <p class="high">High</p>
-                <p class="low">Low</p>
-                <p class="desc">Description</p>
-            </div>
-            <div id="weatherPanel" class="col-xs-2">
-                <h3 class="date">Day 4</h3>
-                <p class="icon">Icon</p>
-                <p class="high">High</p>
-                <p class="low">Low</p>
-                <p class="desc">Description</p>
-            </div>
-            <div id="weatherPanel" class="col-xs-2">
-                <h3 class="date">Day 5</h3>
-                <p class="icon">Icon</p>
-                <p class="high">High</p>
-                <p class="low">Low</p>
-                <p class="desc">Description</p>
-            </div>
-            <div class="col-xs-1 empty">
-            </div>
-        </div>
-    </div>
+<!-- Javascript -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
-</html>
+</html> 
