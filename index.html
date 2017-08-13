@@ -32,44 +32,33 @@
 	<div class="page-header">
 		<h1>Weather Finder</h1>
 	</div>
-
-		<div id="leftSide">
-			<div id="infoBox">
-				<h3>Instructions</h3>
-		  		<p>To see the map and weather for a location that you desire, enter the Location and date in the boxes below.</p>
-			</div>
-			<div id="placeSearch">
-				<h3>Location</h3>
-		  		<div class="input-group">
-      				<input type="text" class="form-control" placeholder="Enter the name of a city.">
-      				<span class="input-group-btn">
-        				<button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-map-marker"></span> Search Map</button>
-      				</span>
-    			</div><!-- /input-group -->
-			</div>
-			<div id="weatherSearch">
-				<h3>Weather</h3>
-		  		<div class="input-group">
-      				<input type="text" class="form-control" placeholder="DD/MM">
-      				<span class="input-group-btn">
-        				<button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-certificate"></span>  Search Weather</button>
-    			</div><!-- /input-group -->
-    		</div>
-		</div>
-		<div id="map">
-		</div>
-	<div class="col-lg-3"></div>
-
-	<div class="col-lg-12">
-		<div class="panel panel-default" id="weather-info">
-			
-		</div>
-
-	</div>
-
-
-</div>
-
+	<div id="leftSide">
+		<div id="infoBox">
+			<h2>Instructions</h2>
+		  	<p>To see the map and weather for a location that you desire, enter the Location and date in the boxes below.</p>
+		</div><!-- close of #infoBox -->
+		<div id="placeSearch">
+			<h2>Location</h2>
+		  	<div class="input-group">
+      			<input type="text" class="form-control" placeholder="Enter the name of a city.">
+      			<span class="input-group-btn">
+        			<button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-map-marker"></span> Search Map</button>
+      			</span>
+    		</div><!-- close of .location input-group -->
+		</div><!-- close of #placeSearch -->
+		<div id="weatherSearch">
+			<h2>Weather</h2>
+		  	<div class="input-group">
+      			<input type="text" class="form-control" placeholder="DD/MM">
+      			<span class="input-group-btn">
+        			<button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-certificate"></span>  Search Weather</button>
+        		</span>
+    		</div><!-- close of .weather input-group -->
+    	</div><!-- close of #weatherSearch -->
+	</div><!-- close of #leftSide -->
+	<div id="map"></div>
+	<div id="weather-info"></div>
+</div><!-- close of .container-fluid -->
 
 <!-- Javascript -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>

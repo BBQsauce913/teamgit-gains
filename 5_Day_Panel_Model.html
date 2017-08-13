@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>5 Day Panel Model</title>
+
+<!-- CSS & BOOTSTRAP & JQUERY -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Kameron|PT+Sans" rel="stylesheet">
+
+<!-- Moment.js -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+
+<!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Weather Finder</h1>
+    </div>
+
+        <div id="leftSide">
+            <div id="infoBox">
+                <h2>Instructions</h2>
+                <p>To see the map and weather for a location that you desire, enter the Location and date in the boxes below.</p>
+            </div>
+            <div id="placeSearch">
+                <h2>Location</h2>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter the name of a city.">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-map-marker"></span> Search Map</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+            <div id="weatherSearch">
+                <h2>Weather</h2>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="DD/MM">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-certificate"></span>  Search Weather</button>
+                </div><!-- /input-group -->
+            </div>
+        </div>
+        <div id="map"></div>
+        
+        <div class="row">
+            <div id="weatherBanner" class="col-xs-12">
+                <h3>5 Day Forecast</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 empty">
+            </div>
+            <div id="weatherPanel" class="col-xs-2">
+                <h3 class="date">Day 1</h3>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div>
+            <div id="weatherPanel" class="col-xs-2">
+                <h3 class="date">Day 2</h3>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div>
+            <div id="weatherPanel" class="col-xs-2">
+                <h3 class="date">Day 3</h3>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div>
+            <div id="weatherPanel" class="col-xs-2">
+                <h3 class="date">Day 4</h3>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div>
+            <div id="weatherPanel" class="col-xs-2">
+                <h3 class="date">Day 5</h3>
+                <p class="icon">Icon</p>
+                <p class="high">High</p>
+                <p class="low">Low</p>
+                <p class="desc">Description</p>
+            </div>
+            <div class="col-xs-1 empty">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
