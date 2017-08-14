@@ -2,8 +2,9 @@
   /*** 1.0 BOX SIZING ***/
   /*** 2.0 COLORS ***/
   	/* 2.1 #535A60 - Graphite */
-  	/* 2.2 #7DB4E0 - Sampled Blue from image */
+  	/* 2.2 #7DB4E0 - Light Blue from image */
   	/* 2.3 #705d86 - Pale Lavender */
+    /* 2.4 #3369b0 - Dark Blue from image */
   /*** 3.0 TEXT & FONTS ***/
     /* 3.1 font-family: 'Kameron', serif; */
     /* 3.2 font-family: 'PT Sans', sans-serif; */
@@ -40,22 +41,24 @@ h2{
 h3{ /* used on weather banner only */
   font-family: 'Kameron', serif;
   font-size: 32px;
-  color: #705d86; /* Pale Lavender */
+  font-weight: bold;
+  color: #282828; /* Graphite */
   text-align: center;
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 10px;
 }
-h4{
+h4{ /* used on instruction panel */
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
   padding: 0px;
   margin: 0px;
   color: #282828; /* Graphite */
 }
-h5{ /* used on weather panels only */
+h5{ /* header on weather panels only */
   font-family: 'Kameron', serif;
   font-size: 28px;
+  font-weight: bolder;
   color: #282828; /* Graphite */
   text-align: center;
   padding: 0px;
@@ -64,8 +67,8 @@ h5{ /* used on weather panels only */
 }
 p{ /* used on weather panels only */
   font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
   text-align: center;
+  color: #FFF; /* White */
 }
 
 /*** 4.0 PAGE & TOP CONSTRUCTION ***/
@@ -108,7 +111,7 @@ body{
   margin-bottom: 20px;
   border-radius: 10px;
   border: 0px;
-  background-color: #7DB4E0; /* sampled blue */
+  background-color: #3369b0; /* Dark Blue */
 }
 #placeSearch{
   height: 90px;
@@ -119,7 +122,7 @@ body{
   margin-bottom: 20px;
   border-radius: 10px;
   border: 0px;
-  background-color: #7DB4E0; /* sampled blue */
+  background-color: #3369b0; /* Dark Blue */
 }
 #weatherSearch{
   height: 90px;
@@ -129,7 +132,7 @@ body{
   padding-left: 20px;
   border-radius: 10px;
   border: 0px;
-  background-color: #7DB4E0; /* sampled blue */
+  background-color: #3369b0; /* Dark Blue */
 }
 
 /*** 6.0 MAP ***/
@@ -140,9 +143,9 @@ body{
   border-radius: 10px;
   margin-top: 0px;
   margin-right: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 0px;
-  background-color: #705d86; /* Pale Lavender */
+  background-color: #3369b0; /* Dark Blue */
 }
 
 /*** 7.0 WEATHER RESULTS ***/
@@ -151,31 +154,50 @@ body{
   float: right;
 }
 #weatherBanner{
-  width: 100%;
   height: 50px;
   padding-top: 10px;
   margin-bottom: 20px;
-  background-color: #FFF; /* white */
+  background-color: #7DB4E0; /* Light Blue */
 }
 #panelConatiner{
-  width: 100%;
   padding: 0px;
   margin: 0px;
   overflow-x: scroll;
 }
 #weatherPanel{
   height: 300px;
-  width: 250px;
+  width: 225px;
   float: left;
   padding-top: 10px;
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 10px;
   margin-top: 0px;
-  margin-right: 15px;
+  margin-right: 20px;
   margin-bottom: 20px;
-  margin-left: 15px;
+  margin-left: 20px;
   border: 0px;
   border-radius: 10px;
-  background-color: #705d86; /* Pale Lavender */
+  background-color: #7DB4E0; /* Light Blue */
+}
+.icon{
+  display: block;
+  margin: auto;
+}
+.high{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0px;
+  font-size: 48px;
+  font-weight: bolder;
+  text-shadow: 0 0 10px #282828; /* Graphite */
+}
+.low{
+  font-size: 28px;
+  margin-bottom: 0px;
+  padding: 0px;
+  text-shadow: 0 0 3px #282828; /* Graphite */
+}
+.desc{
+  font-size: 18px;
 }
