@@ -159,8 +159,7 @@ body{
 }
 #panelConatiner{
   width: 100%;
-  padding-right: 50px;
-  padding-left: 100px;
+  padding: 0px;
   margin: 0px;
   overflow-x: scroll;
 }
