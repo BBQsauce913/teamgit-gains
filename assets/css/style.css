@@ -152,10 +152,7 @@ body{
 #weather-info { /* Container for banner and panels - no styling */
   width: 100%;
   height:300px;
-<<<<<<< HEAD
 	padding: 0;
-=======
->>>>>>> 0d0e69100c884800690f2b37485f6a84b291f210
   float: left;
 	overflow-x: scroll;
   text-align: center;
