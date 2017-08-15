@@ -20,8 +20,13 @@ $(document).ready(function() {
 			console.log(city);
 			
 			var containerDiv = $("<div>");
+<<<<<<< HEAD
 			var rowDiv = $("<div class='row new center'>");
 			var dataDiv = $("<div class='row data center'>");
+=======
+			var rowDiv = $("<div class='row new'>");
+			var dataDiv = $("<div class='row data'>");
+>>>>>>> 0d0e69100c884800690f2b37485f6a84b291f210
 			var h3Title = $("<h3 class='cap'>").text(city);
 			var titleDiv = $("<div class='col-xs-12' id='weatherBanner'>").append(h3Title);
 			
