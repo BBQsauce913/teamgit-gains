@@ -151,9 +151,14 @@ body{
 /*** 7.0 WEATHER RESULTS ***/
 #weather-info { /* Container for banner and panels - no styling */
   width: 100%;
-  float: right;
-	overflow-x: auto;
+  height:300px;
+	padding: 0;
+  float: left;
+	overflow-x: scroll;
+  text-align: center;
   white-space: nowrap;
+  display: none;
+  background-color: #535A60;
 }
 #weatherBanner{
   height: 50px;
@@ -165,21 +170,22 @@ body{
 #panelContainer{
   padding: 0px;
   margin: 0px;
-  overflow-x: scroll;
+
 }
 
 .weatherPanel{
-  height: 300px;
+  height: 250px;
   width: 225px;
   float: left;
+  text-align:center;
   padding-top: 10px;
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 10px;
   margin-top: 0px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  margin-right: 1.388%;
+  margin-bottom: 1.388%;
+  margin-left: 1.388%;
   border: 0px;
   border-radius: 10px;
   background-color: #7DB4E0; /* Light Blue */
@@ -202,6 +208,12 @@ body{
   padding: 0px;
   text-shadow: 0 0 3px #282828; /* Graphite */
 }
+.cap {
+  text-transform: capitalize;
+}
 .desc{
   font-size: 18px;
+}
+.center {
+	margin: 0 auto;
 }

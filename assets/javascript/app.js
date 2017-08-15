@@ -7,7 +7,10 @@ $(document).ready(function() {
 		var key = "f59f8c4d5d70393d411c5b5ea1c8a4f6";
 		var city = $("input").val().trim();
 		var queryURL = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&units=imperial" + "&cnt=5&appid=" + key;
-		
+		$("#weather-info").css({
+			"display": "block"
+		});
+
 		$.ajax({url: queryURL, method: "GET"})
     	.done(function(response) {
 		
@@ -17,17 +20,18 @@ $(document).ready(function() {
 			console.log(city);
 			
 			var containerDiv = $("<div>");
-			var rowDiv = $("<div class='row new'>");
-			var dataDiv = $("<div class='row data'>");
-			var h3Title = $("<h3>").text("5 Day Forecast");
+			var rowDiv = $("<div class='row new center'>");
+			var dataDiv = $("<div class='row data center'>");
+			var h3Title = $("<h3 class='cap'>").text(city);
 			var titleDiv = $("<div class='col-xs-12' id='weatherBanner'>").append(h3Title);
 			
 			var newDiv = containerDiv.append(rowDiv);
 			
-			$("#panelContainer").append(newDiv);
+			$("#weather-info").prepend(newDiv);
 			$(".new").append(titleDiv);
 			$(".new").append(dataDiv);
-			$(".new").removeClass("new");
+			$(".new").removeClass("new"); 
+
 
     	for(var i = 0; i < 5; i++) {
         var date = results[i].dt;
