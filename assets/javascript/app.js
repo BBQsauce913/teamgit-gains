@@ -16,15 +16,15 @@ $(document).ready(function() {
     	var results = response.list;
 			console.log(city);
 			
-			var containerDiv = $("<div class='container'>");
+			var containerDiv = $("<div>");
 			var rowDiv = $("<div class='row new'>");
 			var dataDiv = $("<div class='row data'>");
 			var h3Title = $("<h3>").text("5 Day Forecast");
-			var titleDiv = $("<div class='col-xs-12'>").append(h3Title);
+			var titleDiv = $("<div class='col-xs-12' id='weatherBanner'>").append(h3Title);
 			
 			var newDiv = containerDiv.append(rowDiv);
 			
-			$("#weather-info").append(newDiv);
+			$("#panelContainer").append(newDiv);
 			$(".new").append(titleDiv);
 			$(".new").append(dataDiv);
 			$(".new").removeClass("new");
@@ -43,6 +43,8 @@ $(document).ready(function() {
 				info.push(low);
 				info.push(desc);
 				
+				console.log(moment.unix(date).format("MMM Do YY"));
+				
 				var h3Date = $("<h3>").addClass("date").append((moment.unix((info[k]))).format("dddd"));
 				k+=1;
 				var imgIcon = $("<img>").addClass("icon").attr("src", info[k]);
@@ -54,7 +56,7 @@ $(document).ready(function() {
 				var h5Desc = $("<h5>").addClass("desc").append(info[k]);
 				k+=1;
 				
-				var colDiv = $("<div class='col-xs-2'>").append(h3Date);
+				var colDiv = $("<div class='col-xs-2 weatherPanel'>").append(h3Date);
 				colDiv.append(imgIcon);
 				colDiv.append(h5High);
 				colDiv.append(h5Low);

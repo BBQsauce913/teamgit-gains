@@ -152,6 +152,8 @@ body{
 #weather-info { /* Container for banner and panels - no styling */
   width: 100%;
   float: right;
+	overflow-x: auto;
+  white-space: nowrap;
 }
 #weatherBanner{
   height: 50px;
@@ -159,12 +161,14 @@ body{
   margin-bottom: 20px;
   background-color: #7DB4E0; /* Light Blue */
 }
-#panelConatiner{
+
+#panelContainer{
   padding: 0px;
   margin: 0px;
   overflow-x: scroll;
 }
-#weatherPanel{
+
+.weatherPanel{
   height: 300px;
   width: 225px;
   float: left;
