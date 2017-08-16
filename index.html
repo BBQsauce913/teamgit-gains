@@ -2,69 +2,71 @@
 <html lang="en-us">
 
 <head>
-  <title>Weather Finder</title>
-
-  <meta charset="UTF-8">
-  <meta name="description" content="Week 8 assignment, Project 1" />
-  <meta name="classification" content="game" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-<!-- CSS & BOOTSTRAP & JQUERY -->
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-<!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Kameron|PT+Sans" rel="stylesheet">
-
-<!-- Moment.js -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
-
-<!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+	<title>Weather Finder</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Week 8 assignment, Project 1" />
+	<meta name="classification" content="game" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!-- CSS & BOOTSTRAP & JQUERY -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Kameron|PT+Sans" rel="stylesheet">
+	<!-- Moment.js -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
-<div class="container-fluid">
-    <div class="page-header">
-        <h1>Weather Finder</h1>
-    </div>
-    <div id="leftSide">
-        <div id="infoBox">
-            <h2>Instructions</h2>
-            <h4>To see the map and weather for a location that you desire, enter the Location and date in the boxes below.</h4>
-        </div><!-- close of #infoBox -->
-        <div id="placeSearch">
-            <h2>Location</h2>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Enter the name of a city.">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-map-marker"></span> Search Map</button>
-                </span>
-            </div><!-- close of .location input-group -->
-        </div><!-- close of #placeSearch -->
-        <div id="weatherSearch">
-            <h2>Weather</h2>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="DD/MM">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="search"><span class="glyphicon glyphicon-certificate"></span>  Search Weather</button>
-                </span>
-            </div><!-- close of .weather input-group -->
-        </div><!-- close of #weatherSearch -->
-    </div><!-- closse of #leftSide -->
-    <div id="map"></div>
-    <div id="weather-info" class="panel panel-default">
-    	<div id="panelContainer">
-    		
-    	</div>
-    </div><!-- close of #weather-info -->
-</div><!-- close of .container-fluid -->
 
-<!-- Javascript -->
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+<body>
+
+	<div class="wrapper">
+		<div class="container center">
+
+		<div class="row">
+			<div class="page-header col-lg-12">
+				<h1>Weather Finder</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 space">
+				<div class="row">
+					<div class="col-lg-12 placeSearch">
+						<h2>Instructions</h2>
+						<h4>To see the map and weather for a location that you desire, enter the Location and date in the boxes below.</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 placeSearch">
+						<h2>Location Search</h2>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Kansas City, MO">
+							<button class="btn btn-default" type="button" id="search">Search Location</button>
+							<button class="btn btn-default" type="button" id="clear"> Clear Search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-7" id="map"></div>
+		</div>
+	</div>
+	</div>
+
+	<div class="panel panel-default" id="weather-info"></div>
+
+	<!-- close of #weather-info -->
+	<!-- close of .container-fluid -->
+	<!-- Javascript -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS9KZh27zq_8_0aon5HNWAJ9Lu7orkD7E&libraries=places&callback=initMap" async defer></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
-</html> 
+
+</html>
