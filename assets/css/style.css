@@ -91,6 +91,8 @@ body{
 	width: 100%;
 	font-size: 2em;
   background: url("../images/weather_2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 /*** 5.0 SEARCH BOXES AND BUTTONS ***/
 
