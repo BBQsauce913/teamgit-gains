@@ -21,7 +21,7 @@ $(document).ready(function () {
 	$("#search").on("click", function () {
 		var key = "f59f8c4d5d70393d411c5b5ea1c8a4f6";
 		var city = $("input").val().trim();
-		var queryURL = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&units=imperial" + "&cnt=5&appid=" + key;
+		var queryURL = "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&units=imperial" + "&cnt=5&appid=" + key;
 		$("#weather-info").css({
 			"display": "block"
 		});
@@ -65,7 +65,7 @@ $(document).ready(function () {
 					var low = results[i].temp.min;
 					var desc = results[i].weather[0].description;
 					var iconCode = results[i].weather[0].icon;
-					var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+					var iconURL = "https://openweathermap.org/img/w/" + iconCode + ".png";
 
 					info.push(date);
 					info.push(iconURL);
