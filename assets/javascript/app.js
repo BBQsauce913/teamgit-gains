@@ -65,7 +65,7 @@ $(document).ready(function () {
 					var low = results[i].temp.min;
 					var desc = results[i].weather[0].description;
 					var iconCode = results[i].weather[0].icon;
-					var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+					var iconURL = "https://openweathermap.org/img/w/" + iconCode + ".png";
 
 					info.push(date);
 					info.push(iconURL);
